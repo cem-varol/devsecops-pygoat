@@ -1,0 +1,11 @@
+name: DevSecOps-CI
+
+on: [Push]
+
+jobs:
+ sast-scan: 
+   name: Run Bandit Scan
+   runs-on: ubuntu-latest
+
+   steps: Checkout code
+   uses: actions/checkout@v5.0.0

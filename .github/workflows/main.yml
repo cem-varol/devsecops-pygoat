@@ -23,7 +23,7 @@ jobs:
 
     - name: upload scan report 
       uses: actions/upload-artifact@v4.6.2
-      if: always
+      if: always()
       with:
         name: bandit-findings
         path: bandit-report.json

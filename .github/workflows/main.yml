@@ -35,11 +35,10 @@ jobs:
    steps:
    - name: Checkout code
      uses: actions/checkout@v2
-
-   - name: Set up Docker
-     uses: docker-practice/actions-setup-docker@v1
-     with:
-      docker_version: '28.0.0'
+     
+   - name: Install Docker
+     uses: papodaca/install-docker-action@v1
+          
 
    - name: Build Docker Image
      run: docker build -f Dockerfile -t myapp:latest .

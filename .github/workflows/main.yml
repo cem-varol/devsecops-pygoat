@@ -27,7 +27,21 @@ jobs:
       with:
         name: bandit-findings
         path: bandit-report.json
+  
+  build_image:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Install Docker
+      uses: docker/setup-docker-action@v4.4.0
+
+    - name: build and push docker image
+      uses: docker/build-push-action@v6.18.0
       
+      
+    
+      
+    
     
     
     
